@@ -1,0 +1,55 @@
+---
+swagger: '2.0'
+info:
+  title: Api Gateway
+  description: Api Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /ConsultarCLiente:
+    get:
+      summary: Greet a user
+      operationId: get
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/ConsultarCliente
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /CreateCliente:
+    put:
+      summary: Greet a user
+      operationId: put
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/CreateCliente
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /AlterCliente:
+    post:
+      summary: Greet a user
+      operationId: post
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/alterCliente
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /RemoveCliente:
+    delete:
+      summary: Greet a user
+      operationId: delete
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/removeCliente
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
